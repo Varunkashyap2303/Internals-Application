@@ -16,7 +16,7 @@ namespace InternalsApplication.Models
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Script_ID { get; set; }
 
         public int? IA1 { get; set; }

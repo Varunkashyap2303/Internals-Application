@@ -52,10 +52,11 @@ namespace InternalsApplication.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Script_ID,IA1,IA2,IA3,Teacher_ID,Subject_Code,USN")] Script script)
+        public ActionResult Create(Script script)
         {
             if (ModelState.IsValid)
             {
+                script.Dept_No = db.Students.Where(x => x.USN == script.USN).FirstOrDefault().Dept_ID;
                 db.Scripts.Add(script);
                 db.SaveChanges();
                 return RedirectToAction("Index");

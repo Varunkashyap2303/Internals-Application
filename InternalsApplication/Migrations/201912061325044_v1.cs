@@ -38,7 +38,7 @@ namespace InternalsApplication.Migrations
                 "dbo.Report",
                 c => new
                     {
-                        Report_ID = c.Long(nullable: false),
+                        Report_ID = c.Long(nullable: false, identity: true),
                         Total = c.Int(),
                         Percentage = c.Decimal(precision: 5, scale: 3, storeType: "numeric"),
                         USN = c.String(maxLength: 255),
@@ -63,7 +63,7 @@ namespace InternalsApplication.Migrations
                 "dbo.Script",
                 c => new
                     {
-                        Script_ID = c.Int(nullable: false),
+                        Script_ID = c.Int(nullable: false, identity: true),
                         IA1 = c.Int(),
                         IA2 = c.Int(),
                         IA3 = c.Int(),

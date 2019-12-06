@@ -1,0 +1,58 @@
+﻿@model InternalsApplication.Models.Script
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Script</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Subject.Subject_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subject.Subject_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Teacher.Teacher_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Teacher.Teacher_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IA1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IA1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IA2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IA2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IA3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IA3)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Script_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

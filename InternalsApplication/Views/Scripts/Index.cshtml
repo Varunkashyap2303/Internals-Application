@@ -1,0 +1,57 @@
+﻿@model IEnumerable<InternalsApplication.Models.Script>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Subject.Subject_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Teacher.Teacher_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IA1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IA2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IA3)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Subject.Subject_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Teacher.Teacher_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IA1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IA2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IA3)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Script_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Script_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Script_ID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -4,11 +4,11 @@
     ViewBag.Title = "Index";
 }
 
-<!--
+<h2>Index</h2>
+
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-    -->
 <table class="table">
     <tr>
         <th>
@@ -58,13 +58,11 @@
         <td>
             @Html.DisplayFor(modelItem => item.Percentage)
         </td>
-        
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Report_ID }) |
             @Html.ActionLink("Details", "Details", new { id=item.Report_ID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.Report_ID })
         </td>
-            
     </tr>
 }
 

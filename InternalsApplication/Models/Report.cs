@@ -10,7 +10,7 @@ namespace InternalsApplication.Models
     public partial class Report
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long Report_ID { get; set; }
 
         public int? Total { get; set; }
